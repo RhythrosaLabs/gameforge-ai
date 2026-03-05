@@ -1,0 +1,36 @@
+{
+  "name": "gameforge-ai",
+  "version": "1.0.0",
+  "description": "AI-powered 2D game creation tool by Rhythrosa Labs. Generate game concepts, characters, assets, C# scripts, and fully playable 2D games from a text prompt.",
+  "author": "Daniel Sheils <daniel@rhythrosa.com> (https://www.linkedin.com/in/danielsheils/)",
+  "license": "MIT",
+  "homepage": "https://github.com/rhythrosa-labs/gameforge-ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhythrosa-labs/gameforge-ai.git"
+  },
+  "keywords": [
+    "ai",
+    "game-development",
+    "game-generator",
+    "openai",
+    "dall-e",
+    "gpt-4",
+    "2d-game",
+    "unity",
+    "tool",
+    "creative-ai"
+  ],
+  "scripts": {
+    "dev": "npx serve . --cors -p 3000",
+    "start": "npx serve . --cors -p 3000",
+    "lint": "echo 'No linter configured yet'",
+    "build": "echo 'Static project – no build step required'"
+  },
+  "devDependencies": {
+    "serve": "^14.2.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

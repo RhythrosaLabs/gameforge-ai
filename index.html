@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameForge AI – by Rhythrosa Labs</title>
+    <meta name="description" content="AI-powered 2D game creation tool. Generate game concepts, assets, scripts, and playable games in seconds.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="world-creator.css">
+    <link rel="stylesheet" href="game-player.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Application Container -->
+    <div class="app-container">
+        <!-- Sidebar will be loaded here -->
+        <nav class="sidebar" id="sidebar-container">
+            <!-- Content loaded by template loader -->
+        </nav>
+
+        <!-- Main content area -->
+        <main class="content">
+            <!-- Page Header -->
+            <header>
+                <h1 id="page-title">Dashboard</h1>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </header>
+
+            <!-- Tab contents will be loaded here -->
+            <div id="tab-container">
+                <!-- Content loaded by template loader -->
+            </div>
+        </main>
+    </div>
+    
+    <!-- Modal containers will be loaded here -->
+    <div id="modal-container">
+        <!-- Content loaded by template loader -->
+    </div>
+
+    <!-- ================================== -->
+    <!-- SCRIPT IMPORTS -->
+    <!-- ================================== -->
+    <!-- API client shim must load before ES modules so window.websim is ready -->
+    <script src="api-client.js"></script>
+    <script type="module" src="config.js"></script>
+    <script type="module" src="utils.js"></script>
+    <script type="module" src="template-loader.js"></script>
+    <script type="module" src="file-manager.js"></script>
+    <script type="module" src="image-generator.js"></script>
+    <script type="module" src="audio-generator.js"></script>
+    <script type="module" src="script-generator.js"></script>
+    <script type="module" src="game-plan-generator.js"></script>
+    <script type="module" src="ui-manager.js"></script>
+    <script type="module" src="download-manager.js"></script>
+    <script type="module" src="world-generator.js"></script>
+    <script type="module" src="player-controller.js"></script>
+    <script type="module" src="game-terrain.js"></script>
+    <script type="module" src="world-creator.js"></script>
+    <script type="module" src="game-player.js"></script>
+    <script type="module" src="project-settings-manager.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

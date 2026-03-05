@@ -1,0 +1,749 @@
+/* Button Components */
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.secondary-btn:hover {
+    background-color: rgba(99, 102, 241, 0.08);
+}
+
+.action-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-secondary);
+}
+
+.action-btn:hover {
+    background-color: var(--primary-ultralight);
+    color: var(--primary-color);
+}
+
+.action-btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.action-btn.primary:hover {
+    background-color: var(--primary-light);
+}
+
+/* Form Components */
+textarea, input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-ultralight);
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon input {
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.number-input {
+    display: flex;
+    align-items: center;
+    max-width: 120px;
+}
+
+.number-input button {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.number-input button:first-child {
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.number-input button:last-child {
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.number-input button:hover {
+    background-color: var(--primary-ultralight);
+}
+
+.number-input input {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-left: none;
+    border-right: none;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+/* Checkbox Components */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: var(--primary-ultralight);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Card Components */
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.asset-card {
+    background-color: var(--bg-color);
+    border-radius: var(--radius);
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.image-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.image-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-card .caption {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.image-card.enhanced {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.image-card.enhanced:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.image-card.enhanced:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay i {
+    color: white;
+    font-size: 2rem;
+}
+
+.image-card.enhanced .caption {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-title {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.image-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.script-card {
+    background-color: var(--bg-color);
+    border-radius: var(--radius);
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.script-card:hover {
+    background-color: var(--primary-ultralight);
+}
+
+.script-card.enhanced {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.script-card.enhanced:hover {
+    background-color: var(--primary-ultralight);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.script-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.script-header i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.script-filename {
+    font-weight: 600;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+.script-size {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.script-preview {
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.script-preview pre {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+
+.script-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Badge Components */
+.badge {
+    background-color: var(--warning-color);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+}
+
+/* Modal Components */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+#modal-image {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.modal-caption {
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+#code-content {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1rem 0;
+}
+
+/* Loading Components */
+.loading-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--primary-ultralight);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+.progress-bar-container {
+    width: 100%;
+    max-width: 400px;
+    height: 8px;
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-details {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Notification Components */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 350px;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 1000;
+    animation: slide-in 0.3s ease-out forwards;
+}
+
+.notification.fade-out {
+    animation: slide-out 0.5s ease-out forwards;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.notification i {
+    font-size: 1.2rem;
+}
+
+.notification.success i {
+    color: var(--success-color);
+}
+
+.notification.error i {
+    color: var(--error-color);
+}
+
+.notification.info i {
+    color: var(--primary-color);
+}
+
+.close-notification {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    padding: 0 0.5rem;
+}
+
+/* Info Box Components */
+.info-box {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: rgba(99, 102, 241, 0.08);
+    border-radius: var(--radius);
+}
+
+.info-box i {
+    color: var(--primary-color);
+    margin-right: 0.75rem;
+    margin-top: 0.2rem;
+}
+
+.info-box ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.info-box p {
+    margin: 0.5rem 0;
+}
+
+.wip-notice {
+    background-color: rgba(245, 158, 11, 0.1);
+    border: 1px solid var(--warning-color);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.wip-notice h3 {
+    color: var(--warning-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Music Components */
+.music-track {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+}
+
+.music-track h5 {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.music-track audio {
+    width: 100%;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.button-group .secondary-btn {
+    flex: 0 0 auto;
+}
+
+.button-group .primary-btn {
+    flex: 1;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.project-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.project-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.project-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary);
+}
+
+.empty-state h3 {
+    margin-bottom: 0.5rem;
+}
+
+.empty-state button {
+    margin-top: 1rem;
+}
+
+/* Settings Page Styles */
+.settings-section .card {
+    padding: 1.5rem;
+}
+
+.settings-section .card h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.storage-info {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+.storage-info p {
+    margin: 0.5rem 0;
+}
+
+/* World Creator Styles */
+/* removed: .world-creator, .creator-toolbar, .world-editor, .editor-sidebar, .asset-panel h3, .world-settings h3, .asset-categories, .category-section, .category-section h4, .asset-list, .asset-item, .asset-item img, .asset-item span, .world-settings, .setting-group, .setting-group label, .setting-group select, .editor-viewport, #world-canvas, .viewport-controls, .control-group, .view-controls, .tool-btn, .view-btn, .tool-btn:hover, .view-btn:hover, .tool-btn.active */
+
+/* Game Player Styles */
+/* removed: .game-player, .player-toolbar, .game-viewport, #game-canvas, .game-overlay, .game-ui, .health-bar, .health-fill, .score, .level, .game-controls-help, .game-controls-help h4, .control-info, .control-info kbd */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .world-editor {
+        flex-direction: column;
+    }
+    
+    .editor-sidebar {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .asset-list {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    }
+    
+    .game-ui {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .health-bar {
+        width: 150px;
+    }
+}

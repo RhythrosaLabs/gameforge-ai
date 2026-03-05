@@ -1,0 +1,53 @@
+/* Dark Theme */
+.dark-theme {
+    --primary-color: #818cf8;
+    --primary-light: #6366f1;
+    --primary-ultralight: #4338ca;
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+}
+
+/* Theme-specific component overrides */
+.dark-theme .theme-toggle:hover {
+    background-color: var(--primary-ultralight);
+}
+
+.dark-theme .menu-item:hover {
+    background-color: rgba(129, 140, 248, 0.12);
+}
+
+.dark-theme .menu-item.active {
+    background-color: rgba(129, 140, 248, 0.20);
+}
+
+.dark-theme .secondary-btn:hover {
+    background-color: rgba(129, 140, 248, 0.12);
+}
+
+.dark-theme .script-card:hover {
+    background-color: rgba(129, 140, 248, 0.12);
+}
+
+.dark-theme .script-card.enhanced:hover {
+    background-color: rgba(129, 140, 248, 0.12);
+}
+
+.dark-theme .checkbox-container:hover input ~ .checkmark {
+    background-color: rgba(129, 140, 248, 0.12);
+}
+
+.dark-theme .info-box {
+    background-color: rgba(129, 140, 248, 0.12);
+}
+
+.dark-theme .action-btn:hover {
+    background-color: rgba(129, 140, 248, 0.12);
+}
+
+.dark-theme .number-input button:hover {
+    background-color: rgba(129, 140, 248, 0.12);
+}
+
