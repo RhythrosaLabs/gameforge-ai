@@ -205,3 +205,8 @@ MIT © 2024 [Daniel Sheils](https://www.linkedin.com/in/danielsheils/) / Rhythro
 - [Stability AI](https://stability.ai/) for world texture generation
 - [Font Awesome](https://fontawesome.com/) for icons
 - Originally prototyped on [WebSim](https://websim.ai/)
+
+
+## Support
+
+If you find this useful, consider supporting via [PayPal](https://paypal.me/noodlebake)
