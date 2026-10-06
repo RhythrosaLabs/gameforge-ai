@@ -1,69 +1,214 @@
-<div align="center">
+# GameForge AI 🎮
 
-# 🎮 GameForge AI
+> AI-powered 2D game creation tool by **Rhythrosa Labs**  
+> *From idea to playable game in seconds.*
 
-**From one sentence to a playable 2D game — AI-generated concepts, art, scripts, music, and worlds**
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white)
-![DALL-E 3](https://img.shields.io/badge/DALL--E_3-FF6B35?style=flat)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat)
-
-</div>
+![GameForge AI banner](https://img.shields.io/badge/GameForge_AI-v1.0.0-6366f1?style=for-the-badge&logo=gamepad)
+![License](https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge)
+![OpenAI](https://img.shields.io/badge/powered_by-OpenAI-0ea5e9?style=for-the-badge&logo=openai)
 
 ---
-
-GameForge AI turns a one-sentence game idea into a complete 2D game package: AI-generated game plan, DALL-E 3 concept art, ready-to-use Unity C# scripts, a playable browser platformer, AI-generated textures, background music, and a downloadable asset ZIP.
 
 ## ✨ Features
 
 | Feature | Description |
 |---|---|
-| **AI Game Plan** | Full concept, world, characters, and plot from one sentence |
-| **Asset Generation** | DALL-E 3 concept art — characters, enemies, backgrounds, objects |
-| **Unity Scripts** | C# scripts for player controller, AI enemies, game objects, backgrounds |
-| **Playable Game** | Instantly playable 2D platformer built from your generated plan |
-| **World Creator** | 3D world editor with AI-generated Stability AI textures |
-| **Music Generation** | Background and action music tracks |
-| **ZIP Export** | All assets packaged — images, scripts, models, audio |
-| **Project Library** | Save, load, and manage multiple game projects locally |
+| 🧠 **AI Game Plan** | Full game concept, world, characters, and plot generated from one sentence |
+| 🖼️ **Asset Generation** | DALL-E 3 concept art for characters, enemies, backgrounds, and objects |
+| 📝 **Unity Scripts** | Ready-to-use C# scripts: player controller, AI enemies, game objects, backgrounds |
+| 🎮 **Playable Game** | Instantly playable 2D platformer built from your generated plan |
+| 🌍 **World Creator** | 3D world editor with AI-generated textures (Stability AI) |
+| 🎵 **Music Generation** | Background and action music tracks (experimental) |
+| 📦 **Download Pack** | Export all assets as a ZIP: images, scripts, 3D models, and audio |
+| 💾 **Project Library** | Save, load, and manage multiple game projects locally |
+
+---
 
 ## 🚀 Quick Start
 
+### Prerequisites
+
+- **Node.js** ≥ 18 (for the local dev server)
+- An **OpenAI API key** — [get one here](https://platform.openai.com/api-keys)
+- *(Optional)* A **Stability AI key** for world-creator textures — [get one here](https://platform.stability.ai/account/keys)
+
+### Run locally
+
 ```bash
-git clone https://github.com/RhythrosaLabs/gameforge-ai.git
+# 1. Clone the repo
+git clone https://github.com/rhythrosa-labs/gameforge-ai.git
 cd gameforge-ai
+
+# 2. Install the dev server (one-time)
 npm install
+
+# 3. Start the server
 npm run dev
-# Opens at http://localhost:3000
+# → opens at http://localhost:3000
 ```
 
-> **Note:** Must run through a local server — don't open `index.html` directly (ES modules require HTTP).
+> ⚠️ **You must serve the files through a local server** (not open `index.html` directly) because the app uses ES modules which require HTTP.
 
-Add your OpenAI API key (and optionally Stability AI key) in the Settings panel.
+### First run
+
+1. Open `http://localhost:3000` in your browser.
+2. Click **Settings** in the sidebar.
+3. Paste your **OpenAI API key** and click **Save Settings**.
+4. Go to **Create**, describe your game, and click **Generate Game Plan**!
+
+---
+
+## 🗂️ Project Structure
+
+```
+gameforge-ai/
+├── index.html              # App entry point
+├── api-client.js           # OpenAI API shim (replaces WebSim globals)
+├── app.js                  # Main application coordinator
+├── config.js               # Global configuration & AI prompts
+├── utils.js                # Shared utilities
+│
+├── template-loader.js      # Dynamic template injection
+├── ui-manager.js           # DOM / UI interactions
+├── file-manager.js         # localStorage project & settings management
+├── project-settings-manager.js  # Settings UI + project CRUD
+├── download-manager.js     # ZIP export of all assets
+│
+├── game-plan-generator.js  # Orchestrates all AI generation steps
+├── image-generator.js      # DALL-E 3 image generation
+├── script-generator.js     # GPT-4o Unity C# script generation
+├── audio-generator.js      # Music / TTS generation
+├── asset-analyzer.js       # Deep AI analysis for gameplay integration
+│
+├── world-creator.js        # Interactive 3D world editor (Three.js)
+├── world-generator.js      # Procedural world generation helpers
+├── game-player.js          # 2D platformer engine (Three.js ortho)
+├── game-terrain.js         # Terrain/chunk management
+├── player-controller.js    # Player input & physics
+├── object-factory.js       # Scene object factory
+├── texture-service.js      # AI texture loading & caching
+│
+├── templates/              # HTML templates (injected at runtime)
+│   ├── sidebar-template.js
+│   ├── dashboard-template.js
+│   ├── my-projects-template.js
+│   ├── world-creation-template.js
+│   ├── play-template.js
+│   ├── settings-template.js
+│   ├── about-template.js
+│   └── modals-template.js
+│
+├── base.css                # CSS reset & variables
+├── components.css          # Reusable UI components
+├── layout.css              # Page layout
+├── themes.css              # Light/dark theme definitions
+├── world-creator.css       # World editor styles
+├── game-player.css         # Game player styles
+└── styles.css              # Additional overrides
+```
+
+---
+
+## 🔑 API Keys
+
+| Key | Where to Get | Required? |
+|---|---|---|
+| **OpenAI** | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) | ✅ Yes — powers GPT-4o + DALL-E 3 |
+| **Stability AI** | [platform.stability.ai/account/keys](https://platform.stability.ai/account/keys) | ⚪ Optional — world textures |
+
+Keys are stored **exclusively in your browser's `localStorage`**; they are never sent anywhere except the respective API.
+
+---
 
 ## 🛠️ Tech Stack
 
-- **JavaScript (ES Modules)** — no framework, runs in the browser
-- **Node.js / npm** — local dev server only
-- **OpenAI API** — GPT-4o + DALL-E 3
-- **Stability AI** — world creator textures
+- **Frontend** — Vanilla JS (ES Modules), HTML5, CSS3
+- **AI** — [OpenAI GPT-4o](https://platform.openai.com/) (text), [DALL-E 3](https://platform.openai.com/docs/guides/images) (images)
+- **3D Engine** — [Three.js r132](https://threejs.org/)
+- **Fonts / Icons** — Google Fonts (Poppins, Fira Code), Font Awesome 6
+- **Storage** — Browser `localStorage` (no backend required)
+- **Dev Server** — [serve](https://github.com/vercel/serve)
+
+---
+
+## 🧩 How Generation Works
+
+```
+User prompt
+    │
+    ▼
+Game Concept (GPT-4o)
+    │
+    ├─► World Concept (GPT-4o)
+    ├─► Character Concepts (GPT-4o)
+    ├─► Plot / Narrative (GPT-4o)
+    ├─► Image Assets (DALL-E 3)
+    ├─► Unity C# Scripts (GPT-4o)
+    └─► Background Music (TTS / Web Audio fallback)
+           │
+           ▼
+    Deep Asset Analysis (GPT-4o)
+           │
+           ▼
+    Level Spec Generation (GPT-4o)
+           │
+           ▼
+    Playable 2D Game (Three.js)
+```
+
+---
+
+## ⌨️ Controls (Playable Game)
+
+| Key | Action |
+|---|---|
+| `A` / `←` | Move left |
+| `D` / `→` | Move right |
+| `W` / `Space` / `↑` | Jump |
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] Export as HTML5 game bundle
+- [ ] Multiplayer support (WebRTC)
+- [ ] Custom tileset editor
+- [ ] In-browser script editor
+- [ ] Mobile / touch controls
+- [ ] Share games via URL
+- [ ] Voice-to-game prompt support
+
+---
 
 ## 🤝 Contributing
 
-PRs welcome. Open an issue first for major features.
+Pull requests are welcome! Please open an issue first to discuss what you'd like to change.
+
+1. Fork the repo
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
 
 ## 📄 License
 
-MIT
-
-## 💛 Support
-
-If GameForge AI helps you ship your game, consider supporting development:
-
-👉 [Donate via PayPal](https://paypal.me/noodlebake) — @noodlebake
-
-🌐 [Portfolio: rhythrosalabs.github.io](https://rhythrosalabs.github.io) (more apps, music and sound design)
+MIT © 2024 [Daniel Sheils](https://www.linkedin.com/in/danielsheils/) / Rhythrosa Labs
 
 ---
-<div align="center">Made with ❤️ by <a href="https://github.com/RhythrosaLabs">RhythrosaLabs</a></div>
+
+## 🙏 Acknowledgements
+
+- [OpenAI](https://openai.com/) for GPT-4o and DALL-E 3
+- [Three.js](https://threejs.org/) for the 3D/2D rendering engine
+- [Stability AI](https://stability.ai/) for world texture generation
+- [Font Awesome](https://fontawesome.com/) for icons
+- Originally prototyped on [WebSim](https://websim.ai/)
+
+
+## Support
+
+If you find this useful, consider supporting via [PayPal](https://paypal.me/noodlebake)
+
+🌐 [Portfolio: rhythrosalabs.github.io](https://rhythrosalabs.github.io) (more apps, music and sound design)
