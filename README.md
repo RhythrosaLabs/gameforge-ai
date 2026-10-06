@@ -63,5 +63,7 @@ If GameForge AI helps you ship your game, consider supporting development:
 
 👉 [Donate via PayPal](https://paypal.me/noodlebake) — @noodlebake
 
+🌐 [Portfolio: rhythrosalabs.github.io](https://rhythrosalabs.github.io) (more apps, music and sound design)
+
 ---
 <div align="center">Made with ❤️ by <a href="https://github.com/RhythrosaLabs">RhythrosaLabs</a></div>
