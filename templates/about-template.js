@@ -37,8 +37,8 @@ export const AboutTemplate = `
                 <p>Powered by advanced AI models for text, image, and audio generation.</p>
                 
                 <div class="creator-info">
-                    <h3>Created By</h3>
-                    <p><a href="https://www.linkedin.com/in/danielsheils/" target="_blank">Daniel Sheils</a> (Rhythrosa Labs)</p>
+                    <h3>Built By</h3>
+                    <p><a href="https://rhythrosalabs.github.io/" target="_blank" rel="noopener noreferrer">Dan Sheils</a></p>
                 </div>
             </div>
         </section>

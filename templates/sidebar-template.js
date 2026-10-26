@@ -35,6 +35,6 @@ export const SidebarTemplate = `
     </div>
     <div class="sidebar-footer">
         <p>Powered by AI</p>
-        <p>Created by Rhythrosa Labs</p>
+        <p>Built by <a href="https://rhythrosalabs.github.io/" target="_blank" rel="noopener noreferrer">Dan Sheils</a></p>
     </div>
 `;
