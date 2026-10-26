@@ -1,6 +1,6 @@
 # GameForge AI 🎮
 
-> AI-powered 2D game creation tool by **Rhythrosa Labs**  
+> AI-powered 2D game creation tool by **[Dan Sheils](https://rhythrosalabs.github.io/)**  
 > *From idea to playable game in seconds.*
 
 ![GameForge AI banner](https://img.shields.io/badge/GameForge_AI-v1.0.0-6366f1?style=for-the-badge&logo=gamepad)

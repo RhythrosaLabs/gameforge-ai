@@ -1,8 +1,8 @@
 {
   "name": "gameforge-ai",
   "version": "1.0.0",
-  "description": "AI-powered 2D game creation tool by Rhythrosa Labs. Generate game concepts, characters, assets, C# scripts, and fully playable 2D games from a text prompt.",
-  "author": "Daniel Sheils <daniel@rhythrosa.com> (https://www.linkedin.com/in/danielsheils/)",
+  "description": "AI-powered 2D game creation tool by Dan Sheils. Generate game concepts, characters, assets, C# scripts, and fully playable 2D games from a text prompt.",
+  "author": "Dan Sheils <daniel@rhythrosa.com> (https://rhythrosalabs.github.io/)",
   "license": "MIT",
   "homepage": "https://github.com/rhythrosa-labs/gameforge-ai",
   "repository": {
